@@ -1,3 +1,6 @@
-.pyc
+# suffix
+*.pyc
+*.tfrecords
 
+# folder
 /.idea/
