@@ -86,14 +86,14 @@ with tf.Session() as sess:
         for j in range(_PER_BATCH):
             _, l = sess.run([train_op, loss])
             avg_loss += l / _PER_BATCH
-            print("Epoch{} Batch {} - average loss: {}".format(i+1, j+1, avg_loss))
+            print("Epoch {} Batch {} - average loss: {}".format(i+1, j+1, avg_loss))
 
     coord.request_stop()
     coord.join(threads)
     print("Training complete.")
 
     saver = tf.train.Saver(slim.get_model_variables())
-    saver.save(sess, FLAGS.model_file)
+    saver.save(sess, os.path.join(os.getcwd(), FLAGS.model_file))
 
 
 # tf.reset_default_graph()
