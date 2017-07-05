@@ -1,0 +1,6 @@
+model_checkpoint_path: "word_lstm.model-30199"
+all_model_checkpoint_paths: "word_lstm.model\\model.ckpt-9423"
+all_model_checkpoint_paths: "word_lstm.model\\model.ckpt-16424"
+all_model_checkpoint_paths: "word_lstm.model\\model.ckpt-22961"
+all_model_checkpoint_paths: "word_lstm.model\\model.ckpt-29429"
+all_model_checkpoint_paths: "word_lstm.model-30199"
