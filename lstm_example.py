@@ -10,7 +10,7 @@ FLAGS = flags.FLAGS
 
 flags.DEFINE_string("model", "small", "The type of model, Possible options are: small, medium, large.")
 flags.DEFINE_string("data_path", "./data/simple-examples/data/", "Train and test data's position.")
-flags.DEFINE_string("save_path", "./word_lstm.model", "Model save directory")
+flags.DEFINE_string("save_path", "./model/word_lstm.model", "Model save directory")
 
 
 class PTBInput(object):
@@ -66,7 +66,7 @@ class PTBModel(object):
         if not is_training:
             return
 
-        self._lr = tf.Variable(0.0, trainable=False)
+        self._lr = tf.Variabe(0.0, trainable=False)
         tvars = tf.trainable_variables()
         grads, _ = tf.clip_by_global_norm(tf.gradients(cost, tvars), config.max_grad_norm)
         optimizer = tf.train.GradientDescentOptimizer(self._lr)

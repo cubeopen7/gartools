@@ -1,8 +1,8 @@
 # suffix
 *.pyc
 *.tfrecords
-*.
 
 # folder
 /.idea/
 /data/
+/model/
